@@ -1,0 +1,27 @@
+.appContainer {
+	right: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+.modalPlayer {
+	width: 250px;
+	height: 400px;
+	background-color: #424245;
+	margin-bottom: 70px;
+	margin-right: 60px;
+	border-radius: 4px;
+}
+
+.spotifyLogo {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	width: 75px;
+	height: 75px;
+	-webkit-filter: drop-shadow(-3px 5px 3px rgb(28, 27, 27));
+	filter: drop-shadow(-3px 5px 3px rgb(22, 22, 22));
+	z-index: 3;
+	cursor: pointer;
+	border-radius: 4px;
+}

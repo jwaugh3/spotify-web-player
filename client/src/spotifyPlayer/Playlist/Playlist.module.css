@@ -1,0 +1,247 @@
+.viewContainer {
+	width: 100%;
+	height: 100%;
+	background-color: #313133;
+	position: relative;
+	border-radius: 4px;
+}
+
+.navigationContainer {
+	height: 10%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 90px 40px 120px;
+	position: relative;
+}
+
+.iconContainer {
+	width: 24px;
+	height: 24px;
+	margin: auto;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.playerButton {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	color: white;
+	font-size: 16px;
+	font-family: 'Heebo', 'sans-serif';
+	text-align: center;
+	vertical-align: middle;
+	margin: auto;
+	padding: 3px 8px 3px 6px;
+}
+
+.playerButton:hover {
+	cursor: pointer;
+	color: lightgreen;
+	background-color: #424245;
+	padding: 3px 8px 3px 6px;
+	border-radius: 16px;
+}
+
+input[id='search'] {
+	width: 100px;
+	position: absolute;
+	right: 3px;
+	top: 10px;
+	background-color: #424245;
+	border: none;
+	margin: 3px;
+	border-radius: 8px;
+}
+
+.playlistNameContainer {
+	height: 10%;
+	width: 90%;
+	margin: auto;
+}
+
+.playlistName {
+	height: 100%;
+	max-width: 163px;
+	font-family: 'Heebo', 'sans-serif';
+	font-size: 18px;
+	font-weight: 200;
+	line-height: 260%;
+	color: white;
+	margin: auto;
+	margin-bottom: 0px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* stack layout */
+.playlistContainer {
+	height: 80%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
+
+.playlistContainer::-webkit-scrollbar {
+	width: .5em;
+}
+
+.playlistContainer::-webkit-scrollbar-track {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.playlistContainer::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	border-radius: 10px;
+}
+
+.playlistItem {
+	width: 230px;
+	margin: auto;
+	height: 37px;
+	background-color: #424245;
+	margin-bottom: 4px;
+	display: grid;
+	grid-template-columns: 37px 163px 30px;
+	grid-template-rows: 50% 50%;
+}
+
+.playlistImage {
+	width: 37px;
+	height: 37px;
+	margin: auto;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+
+.nameText {
+	max-width: 163px;
+	display: inline-block;
+	font-family: 'Heebo', 'sans-serif';
+	font-size: 14px;
+	font-weight: 200;
+	color: white;
+	line-height: 100%;
+	margin: auto;
+	margin-left: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+.countText {
+	display: inline-block;
+	font-family: 'Heebo', 'sans-serif';
+	font-size: 12px;
+	color: rgb(182, 182, 182);
+	line-height: 100%;
+	margin: auto;
+	margin-left: 3px;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+.playButton {
+	width: 24px;
+	height: 28px;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	cursor: pointer;
+	margin: auto;
+}
+
+/* block layout */
+.blockLayout {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	width: 100%;
+}
+
+.playlistItemblock {
+	width: 98px;
+	height: 98px;
+	margin: 2px;
+	background-color: #424245;
+	position: relative;
+	cursor: pointer;
+}
+
+.gradient {
+	position: absolute;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, rgba(20, 20, 20, 1) 86%);
+	z-index: 2;
+	width: 98px;
+	height: 98px;
+}
+
+.gradient:hover {
+	background-color: rgba(0, 0, 0, 0.433);
+}
+
+.playlistImageblock {
+	width: 98px;
+	height: 98px;
+	z-index: 1;
+}
+
+.nameTextblock {
+	position: absolute;
+	bottom: 13px;
+	left: 3px;
+	z-index: 5;
+	max-width: 90px;
+	display: inline-block;
+	font-family: 'Heebo', 'sans-serif';
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	line-height: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-bottom: 3px;
+}
+
+.countTextblock {
+	position: absolute;
+	bottom: 0;
+	left: 3px;
+	z-index: 5;
+	display: inline-block;
+	font-family: 'Heebo', 'sans-serif';
+	font-size: 12px;
+	color: rgb(182, 182, 182);
+	line-height: 100%;
+	margin-bottom: 3px;
+}
+
+.playButtonblock {
+	display: none;
+}
+
+.gradient:hover .playButtonblock {
+	display: inline-block;
+	position: absolute;
+	width: 24px;
+	height: 28px;
+	cursor: pointer;
+	margin: auto;
+	z-index: 6;
+	left: 40%;
+	top: 36%;
+}
